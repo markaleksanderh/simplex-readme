@@ -51,7 +51,9 @@ For Windows and Macs you will need to install Haskell and run the chat client lo
 
 ### Build locally
 
-To run the chat locally, you will need to install [Haskell stack](https://docs.haskellstack.org/en/stable/README/). To install Haskell stack, run:
+To run the chat locally, you will need to install [Haskell stack](https://docs.haskellstack.org/en/stable/README/).
+
+To install Haskell stack, run:
 
 ```
 curl -sSL https://get.haskellstack.org/ | sh
@@ -93,6 +95,34 @@ $ dog-food
 [(Back to top)](#table-of-contents)
 
 ## Features
+
+SMP protocol is semi-formally defined [here](https://github.com/simplex-chat/protocol):
+
+### Current available features:
+
+- Simple 1-to-1 chat with multiple people in the same terminal window.
+- Auto-populated recipient name - just type your messages.
+- Default server is available to play with - smp.simplex.im:5223 - and you can deploy your own (smp-server executable in this repo).
+- No global identity or names visible to the server(s) - for the privacy of contacts and conversations.
+- E2E encryption, with public key that has to be passed out-of-band (see below)
+- Authentication of each command/message with automatically generated RSA key pairs, separate for each conversation, the keys are not used as identity (2048 bit keys are used, it can be changed in code via rsaKeySize setting)
+
+
+### Feature roadmap
+
+The following features are currently in development:
+
+- Support for chat groups.
+- Delivery notifications.
+
+### Disclaimers
+
+- No TCP transport encryption - coming soon (messages are encrypted e2e though, only random connection IDs and server commands are visible, but not the contents of the message)
+- System and protocol security was not audited yet, so you probably should NOT use it yet for high security communications - unless you know what you are doing.
+
+
+
+
 
 [(Back to top)](#table-of-contents)
 
