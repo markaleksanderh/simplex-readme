@@ -33,6 +33,9 @@ SimpleX allows simple deployment of chat servers and easy to use chat clients pr
 ## Table of contents
 
 - [Installation](#installation)
+    - [Build locally](#build-locally)
+    - [Docker build](#docker-build)
+- [How SimpleX works](#how-simplex-works)
 - [Features](#features)
 - [Usage](#usage)
 - [Development](#development)
@@ -45,8 +48,7 @@ SimpleX allows simple deployment of chat servers and easy to use chat clients pr
 
 ## Installation
 
-For Windows and Macs you will need to install Haskell and run the chat client locally. Linux users may build the chat client executable using [docker build with custom output](https://docs.docker.com/engine/reference/commandline/build/#custom-build-outputs). If you wish to run SimpleX on Docker skip to [Docker build](#docker-build).
-
+For Windows PCs and Macs you will need to install Haskell and run the chat client locally.
 
 
 ### Build locally
@@ -76,7 +78,9 @@ $ dog-food
 
 ### Docker build
 
-To run SimpleX on Docker, first clone the project. If you don't have Docker installed you can get it [here](https://docs.docker.com/get-docker/).
+Running SimpleX on Docker currently only works on machines running Linux.
+
+To run SimpleX on Docker, first clone the project. If you don't have Docker installed you can get it [here](https://docs.docker.com/get-docker/). 
 
 First clone the repo on your machine:
 
@@ -91,6 +95,8 @@ $ cd simplex-messaging
 $ DOCKER_BUILDKIT=1 docker build --output ~/.local/bin .
 $ dog-food
 ```
+
+
 
 [(Back to top)](#table-of-contents)
 
@@ -117,8 +123,9 @@ The following features are currently in development:
 
 ### Disclaimers
 
-- No TCP transport encryption - coming soon (messages are encrypted e2e though, only random connection IDs and server commands are visible, but not the contents of the message)
-- System and protocol security was not audited yet, so you probably should NOT use it yet for high security communications - unless you know what you are doing.
+- Current build does not yet include TCP transport encryption. Messages are encrypted e2e; only random connection IDs and server commands are visible but not the contents of the message.
+
+- System and protocol security have not been audited yet. As such, it is not advised to use SimpleX for high security communications.
 
 
 
@@ -128,16 +135,22 @@ The following features are currently in development:
 
 ## Usage
 
-[(Back to top)](#table-of-contents)
 
-### Create connection with another SimpleX user
+### Connect to another SimpleX user
+
+
+
+### Deploy SimpleX server
 
 ### Help commands
 
 ### Markdown
 
+
+
 SimpleX supports Markdown.
 
+[(Back to top)](#table-of-contents)
 
 ## Development
 [(Back to top)](#table-of-contents)
