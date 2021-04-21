@@ -38,6 +38,7 @@ SimpleX allows simple deployment of chat servers and easy to use chat clients pr
 - [How SimpleX works](#how-simplex-works)
 - [Features](#features)
 - [Usage](#usage)
+    - [Commands](#commands)
 - [Development](#development)
 - [Contribute](#contribute)
     - [Sponsor](#sponsor)
@@ -135,17 +136,17 @@ The following features are currently in development:
 
 ## Usage
 
+To use SimpleX chat you need another contact to connect to. It takes just two steps in order to establish a connection.
 
-### Connect to another SimpleX user
+The below diagram illustrates how a connection is made:
+
+<img src="how-to-use-simplex.svg">
 
 
 
-### Deploy SimpleX server
-
-### Help commands
 
 ### Markdown
-
+### Deploy SimpleX server
 
 
 SimpleX supports Markdown.
