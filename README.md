@@ -140,8 +140,9 @@ To use SimpleX chat you need another contact to connect to. It takes just two st
 
 The below diagram illustrates how a connection is made:
 
-<img src="how-to-use-simplex.svg" align="center">
-
+<div align="center">
+    <img src="how-to-use-simplex.svg">
+</div>
 
 
 
